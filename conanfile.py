@@ -4,7 +4,7 @@ import os
 required_conan_version = ">=1.52.0"
 
 class JwtCppConan(ConanFile):
-    version = "0.7.1-alfa1+0"
+    version = "0.7.1+0"
     name = "jwt-cpp"
     description = "A C++ JSON Web Token library for encoding/decoding"
     license = "MIT"
