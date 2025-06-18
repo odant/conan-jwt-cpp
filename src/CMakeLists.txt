@@ -13,7 +13,7 @@ if(HUNTER_ENABLED)
   message(STATUS "jwt-cpp: using hunter for dependency resolution")
 endif()
 
-project(jwt-cpp)
+project(jwt-cpp LANGUAGES CXX)
 
 option(JWT_BUILD_EXAMPLES "Configure CMake to build examples (or not)" ON)
 option(JWT_BUILD_TESTS "Configure CMake to build tests (or not)" OFF)
@@ -143,7 +143,7 @@ endif()
 configure_package_config_file(
   ${CMAKE_CURRENT_LIST_DIR}/cmake/jwt-cpp-config.cmake.in ${CMAKE_CURRENT_BINARY_DIR}/jwt-cpp-config.cmake
   INSTALL_DESTINATION ${JWT_CMAKE_FILES_INSTALL_DIR})
-write_basic_package_version_file(${CMAKE_CURRENT_BINARY_DIR}/jwt-cpp-config-version.cmake VERSION 0.7.0
+write_basic_package_version_file(${CMAKE_CURRENT_BINARY_DIR}/jwt-cpp-config-version.cmake VERSION 0.7.1
                                  COMPATIBILITY ExactVersion)
 
 install(TARGETS jwt-cpp EXPORT jwt-cpp-targets PUBLIC_HEADER DESTINATION ${CMAKE_INSTALL_INCLUDEDIR})
